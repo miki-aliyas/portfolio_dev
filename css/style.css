@@ -1,0 +1,710 @@
+body {
+  opacity: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  -webkit-transition: 3s ease;
+  transition: 3s ease;
+}
+
+body.active {
+  opacity: 1;
+}
+
+.hind {
+  font-family: 'Hind Siliguri', sans-serif;
+  color: #262626;
+}
+
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.fl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main_area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 999;
+  width: 80%;
+  text-align: center;
+}
+
+.main_area h1 {
+  color: #262626;
+  font-size: 90px;
+  letter-spacing: 5px;
+}
+
+@media (max-width: 769px) {
+  .main_area h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 415px) {
+  .main_area h1 {
+    font-size: 50px;
+    line-height: 1.2;
+  }
+}
+
+.main_area .sub_title {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-top: 20px;
+}
+
+@media (max-width: 769px) {
+  .main_area .sub_title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 415px) {
+  .main_area .sub_title {
+    font-size: 20px;
+    margin-top: 10px;
+    letter-spacing: 3px;
+  }
+}
+
+header .menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  margin-top: 50px;
+}
+
+@media (max-width: 415px) {
+  header .menu {
+    margin-top: 20px;
+  }
+}
+
+header .menu li {
+  margin-left: 50px;
+}
+
+@media (max-width: 415px) {
+  header .menu li {
+    margin-left: 20px;
+  }
+}
+
+header .menu li a {
+  color: #262626;
+  letter-spacing: 2px;
+  font-size: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 415px) {
+  header .menu li a {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1025px) {
+  header .menu li a:hover {
+    opacity: 0.5;
+  }
+}
+
+.wrapper {
+  background-color: #f7f7f7;
+}
+
+.wrapper .title {
+  padding-top: 150px;
+}
+
+.wrapper .title.contact_lr h2 {
+  padding-top: 0px;
+}
+
+@media (max-width: 415px) {
+  .wrapper .title.contact_lr h2 {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 769px) {
+  .wrapper .title {
+    padding-top: 0;
+  }
+}
+
+.wrapper .title h2 {
+  padding-top: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+@media (max-width: 415px) {
+  .wrapper .title h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 376px) {
+  .wrapper .title h2 {
+    font-size: 35px;
+  }
+}
+
+.wrapper .content {
+  background-color: #fff;
+}
+
+.wrapper .content.lr {
+  background-color: #f7f7f7;
+}
+
+@media (max-width: 900px) {
+  .wrapper .content.lr {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 415px) {
+  .wrapper .content.lr {
+    margin-bottom: 40px;
+  }
+}
+
+.wrapper .content.detail {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #efefef;
+}
+
+@media (max-width: 900px) {
+  .wrapper .content.detail {
+    padding: 0px 15px;
+  }
+}
+
+.wrapper .content.detail.open {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 415px) {
+  .wrapper .content.detail.open {
+    margin-bottom: 40px;
+  }
+}
+
+.wrapper .content .box {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.wrapper .content .box.contents {
+  margin: 50px auto 25px auto;
+}
+
+@media (max-width: 900px) {
+  .wrapper .content .box.contents {
+    margin: 15px auto 0px auto;
+  }
+}
+
+@media (max-width: 415px) {
+  .wrapper .content .box.contents {
+    margin-top: 40px;
+  }
+}
+
+.wrapper .content .box.open_btn {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 415px) {
+  .wrapper .content .box.open_btn {
+    margin-bottom: 15px;
+  }
+}
+
+/* https://developer.mozilla.org/ja/docs/Web/CSS/filter-function/brightness */
+.wrapper .content .box.open_btn:hover img {
+  -webkit-filter: brightness(40%);
+          filter: brightness(40%);
+}
+
+/* ホバーした時に0.3秒かけて文字が表示される */
+.wrapper .content .box.open_btn:hover .text {
+  opacity: 1;
+}
+
+.wrapper .content .box.open_btn .img {
+  -webkit-box-shadow: 0 0 5px #dfdfdf;
+          box-shadow: 0 0 5px #dfdfdf;
+}
+
+.wrapper .content .box.open_btn .img img {
+  display: block;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+}
+
+/* デフォルトは透明度０ */
+.wrapper .content .box.open_btn .text {
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #fff;
+  /* https://arts-factory.net/position/　中央に配置するやり方 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 18px;
+  letter-spacing: 5px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.8;
+  width: 80%;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+}
+
+@media (max-width: 415px) {
+  .wrapper .content .box.open_btn .text {
+    font-size: 14px;
+    line-height: 1.5;
+    width: 90%;
+  }
+}
+
+.wrapper .content .box.open_btn .text span {
+  display: inline-block;
+}
+
+.thumb {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+@media (max-width: 415px) {
+  .thumb {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+}
+
+.thumb li {
+  width: 23%;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 415px) {
+  .thumb li {
+    margin-bottom: 10px;
+  }
+}
+
+.thumb li a {
+  display: block;
+  position: relative;
+  padding-top: 54.5%;
+  border: 3px solid #e3e4e8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 415px) {
+  .thumb li a {
+    padding-top: 53.1%;
+    border: 2.5px solid #e3e4e8;
+  }
+}
+
+@media (max-width: 321px) {
+  .thumb li a {
+    padding-top: 52.3%;
+  }
+}
+
+.thumb li a.active {
+  border: 3px solid #fac75a;
+}
+
+@media (max-width: 415px) {
+  .thumb li a.active {
+    border: 2.5px solid #fac75a;
+  }
+}
+
+.thumb li a img {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.thumb:before {
+  content: "";
+  display: block;
+  width: 23%;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.thumb:after {
+  content: "";
+  display: block;
+  width: 23%;
+}
+
+.bx-wrapper {
+  background-color: transparent;
+  margin: 0px auto;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.bx-wrapper .bx-viewport {
+  -webkit-box-shadow: 0 0 5px #dfdfdf;
+          box-shadow: 0 0 5px #dfdfdf;
+}
+
+.bx-wrapper img {
+  display: block;
+  width: 100%;
+}
+
+.close_btn {
+  position: absolute;
+  top: 6.2%;
+  right: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 999;
+  cursor: pointer;
+}
+
+@media (max-width: 769px) {
+  .close_btn {
+    top: 5%;
+  }
+}
+
+@media (max-width: 415px) {
+  .close_btn {
+    top: 7.5%;
+    right: 3%;
+  }
+}
+
+/* 閉じるボタン ここから */
+/* https://developer.mozilla.org/ja/docs/Web/CSS/transform-function/rotate */
+.close_btn .dli_close {
+  display: inline-block;
+  padding: 17px 0;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+}
+
+.close_btn .dli_close:hover {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.close_btn .dli_close::before {
+  display: block;
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: #000;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+@media (max-width: 769px) {
+  .close_btn .dli_close::before {
+    width: 30px;
+  }
+}
+
+@media (max-width: 415px) {
+  .close_btn .dli_close::before {
+    width: 20px;
+  }
+}
+
+.close_btn .dli_close::after {
+  display: block;
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: #000;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+@media (max-width: 769px) {
+  .close_btn .dli_close::after {
+    width: 30px;
+  }
+}
+
+@media (max-width: 415px) {
+  .close_btn .dli_close::after {
+    width: 20px;
+  }
+}
+/* 閉じるボタン ここまで */
+
+/* 各アプリの説明文 ここから */
+.credit {
+  color: #333;
+  font-size: 15px;
+  padding: 5px 0 25px 0;
+}
+
+@media (max-width: 769px) {
+  .credit {
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 415px) {
+  .credit {
+    padding-bottom: 40px;
+  }
+}
+
+.credit .site_title {
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  letter-spacing: 2px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.credit .site_title a::after {
+  display: inline-block;
+  content: "";
+  background-image: url(../images/blank.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
+@media (max-width: 321px) {
+  .credit .site_title {
+    font-size: 14px;
+  }
+}
+
+.credit .site_title a {
+  font-weight: 500;
+}
+
+@media (max-width: 415px) {
+  .credit .site_title a {
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 1025px) {
+  .credit .site_title a:hover {
+    text-decoration: underline;
+  }
+}
+
+.credit .site_title span {
+  width: 15px;
+  margin: 5px 0 0 5px;
+}
+
+@media (max-width: 321px) {
+  .credit .site_title span {
+    width: 20px;
+  }
+}
+
+.credit .tool {
+  font-size: 14px;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.credit .tool a {
+  text-decoration: underline;
+}
+
+.credit .tool .icon {
+  width: 25px;
+  display: block;
+  margin-top: 2px;
+}
+
+.credit .tool.ja {
+  letter-spacing: 1.5px;
+}
+
+.credit .tool.last {
+  margin-bottom: 25px;
+}
+
+.credit .c_text {
+  font-size: 14px;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  letter-spacing: 2px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.credit .c_text a {
+  text-decoration: underline;
+}
+/* 各アプリの説明文 ここまで */
+
+.contact_box {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.contact_box p {
+  margin-bottom: 50px;
+  line-height: 1.8;
+}
+
+@media (max-width: 415px) {
+  .contact_box p {
+    margin-bottom: 30px;
+  }
+}
+
+.contact_box p.mail {
+  font-size: 15px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact_box p.mail span {
+  width: 15px;
+  margin: 7px 5px 0 0;
+}
+
+.contact_box p .ttr {
+  display: inline-block;
+}
+
+@media (max-width: 415px) {
+  .contact_box p a {
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 1025px) {
+  .contact_box p a:hover {
+    text-decoration: underline;
+  }
+}
+
+footer {
+  background-color: #f7f7f7;
+  padding: 0px 0 20px 0;
+}
+
+footer .footer_content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer .footer_content small {
+  font-size: 14px;
+}
+
+@media (max-width: 415px) {
+  footer .footer_content small {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
