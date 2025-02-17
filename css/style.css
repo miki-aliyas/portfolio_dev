@@ -251,6 +251,7 @@ header .menu li a {
   }
 }
 
+/* 画像に対してホバーした時に、画像の明るさを通常の40%に減少させる */
 /* https://developer.mozilla.org/ja/docs/Web/CSS/filter-function/brightness */
 .wrapper .content .box.open_btn:hover img {
   -webkit-filter: brightness(40%);
@@ -262,24 +263,27 @@ header .menu li a {
   opacity: 1;
 }
 
+/* 画像要素に薄いグレーの影が付けて視覚的な立体感を追加 */
+/* https://developer.mozilla.org/ja/docs/Web/CSS/box-shadow */
 .wrapper .content .box.open_btn .img {
   -webkit-box-shadow: 0 0 5px #dfdfdf;
           box-shadow: 0 0 5px #dfdfdf;
 }
 
+/* 画像に対してスタイルの変更を0.6秒かけて実行する */
 .wrapper .content .box.open_btn .img img {
   display: block;
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
 }
 
-/* デフォルトは透明度０ */
+/* テキストの不透明度を0に設定し、初期状態で表示されないようにする */
 .wrapper .content .box.open_btn .text {
   opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #fff;
-  /* https://arts-factory.net/position/　中央に配置するやり方 */
+  /* 中央に配置するやり方（https://arts-factory.net/position/） */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -707,4 +711,3 @@ footer .footer_content small {
     font-size: 12px;
   }
 }
-/*# sourceMappingURL=style.css.map */

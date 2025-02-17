@@ -1,8 +1,10 @@
+// ページ読み込みまれた時にbodyタグにアクティブクラスを追加する（https://www.javadrive.jp/javascript/event/index1.html）
 var body = document.body;
 window.addEventListener('load', function() {
     body.classList.add('active');
 });
 
+// ウィンドウの高さに合わせて#js-main-visualの高さを調整する
 function imageJustSize() {
     var mainVisual = document.getElementById('js-main-visual');
     var winH = window.innerHeight;
@@ -12,14 +14,14 @@ imageJustSize();
 
 $(function(){
 
-    // トグルボタン
+    // トグルボタンをクリックした時の挙動の設定
     $(".article-btn").click(function() {
         var show_text = $(this).parent().next(".article-text");
-        var small_height = 0; //This is initial height.
+        var small_height = 0; 
         var original_height = show_text.css({ height: "auto" }).height();
 
+        // トグルボタンが開いている状態の処理
         if($(this).hasClass("open")){
-            // 開いている状態の状態の場合
             show_text.animate({ height: small_height },400, 'swing');
             show_text.removeClass("open");
             $(this).removeClass("open");
@@ -32,8 +34,8 @@ $(function(){
             window.location.hash = target_close;
             });
 
+        //  閉じるボタンがクリックされた時の挙動を設定
         }else{
-            //閉じている状態の場合
             show_text.height(small_height).animate({ height: original_height }, 400, function() {
                 show_text.height("auto");
             });
@@ -84,7 +86,7 @@ $(function(){
         });
     });
 
-    // スムーススクロール
+    // スムーススクロールの設定
     $('a[href^="#"]').on('click',function (e) {
         e.preventDefault();
  
