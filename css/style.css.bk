@@ -1,7 +1,7 @@
-@charset "UTF-8";
 body {
   opacity: 0;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  -webkit-transition: 3s ease;
   transition: 3s ease;
 }
 
@@ -10,25 +10,35 @@ body.active {
 }
 
 .hind {
-  font-family: "Hind Siliguri", sans-serif;
+  font-family: 'Hind Siliguri', sans-serif;
   color: #262626;
 }
 
 .lato {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .fl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main_area {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #fff;
   z-index: 999;
   width: 80%;
@@ -40,12 +50,14 @@ body.active {
   font-size: 90px;
   letter-spacing: 5px;
 }
-@media screen and (max-width: 769px) {
+
+@media (max-width: 769px) {
   .main_area h1 {
     font-size: 60px;
   }
 }
-@media screen and (max-width: 415px) {
+
+@media (max-width: 415px) {
   .main_area h1 {
     font-size: 50px;
     line-height: 1.2;
@@ -64,6 +76,7 @@ body.active {
     font-size: 30px;
   }
 }
+
 @media (max-width: 415px) {
   .main_area .sub_title {
     font-size: 20px;
@@ -71,6 +84,7 @@ body.active {
     letter-spacing: 3px;
   }
 }
+
 header .menu {
   position: absolute;
   left: 0;
@@ -84,6 +98,7 @@ header .menu {
     margin-top: 20px;
   }
 }
+
 header .menu li {
   margin-left: 50px;
 }
@@ -93,10 +108,12 @@ header .menu li {
     margin-left: 20px;
   }
 }
+
 header .menu li a {
   color: #262626;
   letter-spacing: 2px;
   font-size: 20px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -105,17 +122,21 @@ header .menu li a {
     font-size: 16px;
   }
 }
+
 @media (min-width: 1025px) {
   header .menu li a:hover {
     opacity: 0.5;
   }
 }
+
 .wrapper {
   background-color: #f7f7f7;
 }
+
 .wrapper .title {
   padding-top: 150px;
 }
+
 .wrapper .title.contact_lr h2 {
   padding-top: 0px;
 }
@@ -125,11 +146,13 @@ header .menu li a {
     padding-top: 10px;
   }
 }
+
 @media (max-width: 769px) {
   .wrapper .title {
     padding-top: 0;
   }
 }
+
 .wrapper .title h2 {
   padding-top: 50px;
   text-align: center;
@@ -145,17 +168,15 @@ header .menu li a {
     margin-bottom: 20px;
   }
 }
+
 @media (max-width: 376px) {
   .wrapper .title h2 {
     font-size: 35px;
   }
 }
-.wrapper .content {
-  background-color: #8e1d1d;
-}
 
-.wrapper-content {
-  background-color: #0a627d;
+.wrapper .content {
+  background-color: #fff;
 }
 
 .wrapper .content.lr {
@@ -167,11 +188,13 @@ header .menu li a {
     margin: 0 15px;
   }
 }
+
 @media (max-width: 415px) {
   .wrapper .content.lr {
     margin-bottom: 40px;
   }
 }
+
 .wrapper .content.detail {
   position: relative;
   height: 0;
@@ -184,6 +207,7 @@ header .menu li a {
     padding: 0px 15px;
   }
 }
+
 .wrapper .content.detail.open {
   margin-bottom: 50px;
 }
@@ -193,6 +217,7 @@ header .menu li a {
     margin-bottom: 40px;
   }
 }
+
 .wrapper .content .box {
   max-width: 900px;
   margin: 0 auto;
@@ -207,11 +232,13 @@ header .menu li a {
     margin: 15px auto 0px auto;
   }
 }
+
 @media (max-width: 415px) {
   .wrapper .content .box.contents {
     margin-top: 40px;
   }
 }
+
 .wrapper .content .box.open_btn {
   position: relative;
   cursor: pointer;
@@ -223,10 +250,12 @@ header .menu li a {
     margin-bottom: 15px;
   }
 }
+
 /* 画像に対してホバーした時に、画像の明るさを通常の40%に減少させる */
 /* https://developer.mozilla.org/ja/docs/Web/CSS/filter-function/brightness */
 .wrapper .content .box.open_btn:hover img {
-  filter: brightness(40%);
+  -webkit-filter: brightness(40%);
+          filter: brightness(40%);
 }
 
 /* ホバーした時に0.3秒かけて文字が表示される */
@@ -237,32 +266,37 @@ header .menu li a {
 /* 画像要素に薄いグレーの影が付けて視覚的な立体感を追加 */
 /* https://developer.mozilla.org/ja/docs/Web/CSS/box-shadow */
 .wrapper .content .box.open_btn .img {
-  box-shadow: 0 0 5px #dfdfdf;
+  -webkit-box-shadow: 0 0 5px #dfdfdf;
+          box-shadow: 0 0 5px #dfdfdf;
 }
 
 /* 画像に対してスタイルの変更を0.6秒かけて実行する */
 .wrapper .content .box.open_btn .img img {
   display: block;
+  -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
 }
 
 /* テキストの不透明度を0に設定し、初期状態で表示されないようにする */
 .wrapper .content .box.open_btn .text {
   opacity: 0;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #fff;
   /* 中央に配置するやり方（https://arts-factory.net/position/） */
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-size: 18px;
   letter-spacing: 5px;
   font-weight: 300;
   text-align: center;
   line-height: 1.8;
   width: 80%;
-  font-feature-settings: "palt";
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
 }
 
 @media (max-width: 415px) {
@@ -272,15 +306,27 @@ header .menu li a {
     width: 90%;
   }
 }
+
 .wrapper .content .box.open_btn .text span {
   display: inline-block;
 }
 
 .thumb {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 30px;
 }
 
@@ -290,6 +336,7 @@ header .menu li a {
     margin-bottom: 15px;
   }
 }
+
 .thumb li {
   width: 23%;
   margin-bottom: 25px;
@@ -300,12 +347,15 @@ header .menu li a {
     margin-bottom: 10px;
   }
 }
+
 .thumb li a {
   display: block;
   position: relative;
   padding-top: 54.5%;
   border: 3px solid #e3e4e8;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -315,11 +365,13 @@ header .menu li a {
     border: 2.5px solid #e3e4e8;
   }
 }
+
 @media (max-width: 321px) {
   .thumb li a {
     padding-top: 52.3%;
   }
 }
+
 .thumb li a.active {
   border: 3px solid #fac75a;
 }
@@ -329,11 +381,13 @@ header .menu li a {
     border: 2.5px solid #fac75a;
   }
 }
+
 .thumb li a img {
   position: absolute;
   top: 0px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   max-width: 100%;
   max-height: 100%;
 }
@@ -342,7 +396,10 @@ header .menu li a {
   content: "";
   display: block;
   width: 23%;
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .thumb:after {
@@ -355,11 +412,13 @@ header .menu li a {
   background-color: transparent;
   margin: 0px auto;
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .bx-wrapper .bx-viewport {
-  box-shadow: 0 0 5px #dfdfdf;
+  -webkit-box-shadow: 0 0 5px #dfdfdf;
+          box-shadow: 0 0 5px #dfdfdf;
 }
 
 .bx-wrapper img {
@@ -371,7 +430,8 @@ header .menu li a {
   position: absolute;
   top: 6.2%;
   right: 1%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 999;
   cursor: pointer;
 }
@@ -381,23 +441,28 @@ header .menu li a {
     top: 5%;
   }
 }
+
 @media (max-width: 415px) {
   .close_btn {
     top: 7.5%;
     right: 3%;
   }
 }
+
 /* 閉じるボタン ここから */
 /* https://developer.mozilla.org/ja/docs/Web/CSS/transform-function/rotate */
 .close_btn .dli_close {
   display: inline-block;
   padding: 17px 0;
-  transform-origin: center center;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
 }
 
 .close_btn .dli_close:hover {
-  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
 }
 
 .close_btn .dli_close::before {
@@ -406,7 +471,8 @@ header .menu li a {
   width: 40px;
   height: 1px;
   background: #000;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 @media (max-width: 769px) {
@@ -414,18 +480,21 @@ header .menu li a {
     width: 30px;
   }
 }
+
 @media (max-width: 415px) {
   .close_btn .dli_close::before {
     width: 20px;
   }
 }
+
 .close_btn .dli_close::after {
   display: block;
   content: "";
   width: 40px;
   height: 1px;
   background: #000;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 @media (max-width: 769px) {
@@ -433,12 +502,14 @@ header .menu li a {
     width: 30px;
   }
 }
+
 @media (max-width: 415px) {
   .close_btn .dli_close::after {
     width: 20px;
   }
 }
 /* 閉じるボタン ここまで */
+
 /* 各アプリの説明文 ここから */
 .credit {
   color: #333;
@@ -451,17 +522,29 @@ header .menu li a {
     padding-bottom: 15px;
   }
 }
+
 @media (max-width: 415px) {
   .credit {
     padding-bottom: 40px;
   }
 }
+
 .credit .site_title {
-  font-feature-settings: "palt";
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
   letter-spacing: 2px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 25px;
   line-height: 1.5;
 }
@@ -483,6 +566,7 @@ header .menu li a {
     font-size: 14px;
   }
 }
+
 .credit .site_title a {
   font-weight: 500;
 }
@@ -492,11 +576,13 @@ header .menu li a {
     text-decoration: underline;
   }
 }
+
 @media (min-width: 1025px) {
   .credit .site_title a:hover {
     text-decoration: underline;
   }
 }
+
 .credit .site_title span {
   width: 15px;
   margin: 5px 0 0 5px;
@@ -507,9 +593,11 @@ header .menu li a {
     width: 20px;
   }
 }
+
 .credit .tool {
   font-size: 14px;
-  font-feature-settings: "palt";
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
   font-weight: 300;
   line-height: 1.5;
   margin-bottom: 10px;
@@ -535,7 +623,8 @@ header .menu li a {
 
 .credit .c_text {
   font-size: 14px;
-  font-feature-settings: "palt";
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
   letter-spacing: 2px;
   font-weight: 300;
   line-height: 1.5;
@@ -544,8 +633,8 @@ header .menu li a {
 .credit .c_text a {
   text-decoration: underline;
 }
-
 /* 各アプリの説明文 ここまで */
+
 .contact_box {
   max-width: 900px;
   margin: 0 auto;
@@ -564,11 +653,21 @@ header .menu li a {
     margin-bottom: 30px;
   }
 }
+
 .contact_box p.mail {
   font-size: 15px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contact_box p.mail span {
@@ -585,11 +684,13 @@ header .menu li a {
     text-decoration: underline;
   }
 }
+
 @media (min-width: 1025px) {
   .contact_box p a:hover {
     text-decoration: underline;
   }
 }
+
 footer {
   background-color: #f7f7f7;
   padding: 0px 0 20px 0;
@@ -609,4 +710,4 @@ footer .footer_content small {
   footer .footer_content small {
     font-size: 12px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
