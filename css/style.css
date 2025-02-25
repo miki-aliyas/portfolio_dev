@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   opacity: 0;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   transition: 3s ease;
 }
 body.active {
@@ -9,11 +9,11 @@ body.active {
 }
 
 .hind {
-  font-family: "Hind Siliguri", sans-serif;
+  font-family: 'Hind Siliguri', sans-serif;
 }
 
 .lato {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .fl {
@@ -247,7 +247,7 @@ header .menu li a {
   text-align: center;
   line-height: 1.8;
   width: 80%;
-  font-feature-settings: "palt";
+  font-feature-settings: 'palt';
 }
 @media (max-width: 415px) {
   .wrapper .content .box.open_btn .text {
@@ -318,13 +318,13 @@ header .menu li a {
   max-height: 100%;
 }
 .thumb:before {
-  content: "";
+  content: '';
   display: block;
   width: 23%;
   order: 1;
 }
 .thumb:after {
-  content: "";
+  content: '';
   display: block;
   width: 23%;
 }
@@ -376,7 +376,7 @@ header .menu li a {
 }
 .close_btn .dli_close::before {
   display: block;
-  content: "";
+  content: '';
   width: 40px;
   height: 1px;
   background: #000;
@@ -394,7 +394,7 @@ header .menu li a {
 }
 .close_btn .dli_close::after {
   display: block;
-  content: "";
+  content: '';
   width: 40px;
   height: 1px;
   background: #000;
@@ -429,7 +429,7 @@ header .menu li a {
   }
 }
 .credit .site_title {
-  font-feature-settings: "palt";
+  font-feature-settings: 'palt';
   letter-spacing: 2px;
   display: inline-flex;
   justify-content: flex-start;
@@ -439,7 +439,7 @@ header .menu li a {
 }
 .credit .site_title a::after {
   display: inline-block;
-  content: "";
+  content: '';
   background-image: url(../images/blank.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -477,7 +477,7 @@ header .menu li a {
 }
 .credit .tool {
   font-size: 14px;
-  font-feature-settings: "palt";
+  font-feature-settings: 'palt';
   font-weight: 300;
   line-height: 1.5;
   margin-bottom: 10px;
@@ -498,7 +498,7 @@ header .menu li a {
 }
 .credit .c_text {
   font-size: 14px;
-  font-feature-settings: "palt";
+  font-feature-settings: 'palt';
   letter-spacing: 2px;
   font-weight: 300;
   line-height: 1.5;
@@ -564,4 +564,4 @@ footer .footer_content small {
   footer .footer_content small {
     font-size: 12px;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
